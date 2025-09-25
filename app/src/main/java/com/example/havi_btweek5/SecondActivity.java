@@ -8,10 +8,10 @@ import java.util.Random;
 public class SecondActivity extends AppCompatActivity {
 
     String[] funFacts = {
-            "🐧 Chim cánh cụt có thể nhảy cao gần 2 mét dưới nước.",
-            "🌙 Trên sao Hỏa có núi lửa cao gấp 3 lần Everest.",
-            "🦄 Kỳ lân từng được coi là có thật trong cổ tích.",
-            "🍫 Sô-cô-la từng được dùng như tiền tệ ở Trung Mỹ cổ đại.",
+            "🐧 Chim cánh cụt bơi rất giỏi.",
+            "🌙 Núi lửa trên sao Hỏa cao gấp 3 lần Everest.",
+            "🦄 Kỳ lân từng được coi là có thật.",
+            "🍫 Sô-cô-la từng làm tiền tệ ở Trung Mỹ cổ đại.",
             "🐢 Rùa có thể thở bằng mông khi ngủ đông.",
             "🚀 Một ngày trên sao Kim dài hơn một năm của nó."
     };
@@ -21,11 +21,15 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        TextView quoteText = findViewById(R.id.quoteText);
+        TextView fact1 = findViewById(R.id.fact1);
+        TextView fact2 = findViewById(R.id.fact2);
+        TextView fact3 = findViewById(R.id.fact3);
 
         Random random = new Random();
-        int index = random.nextInt(funFacts.length);
+        int len = funFacts.length;
 
-        quoteText.setText(funFacts[index]);
+        fact1.setText(funFacts[random.nextInt(len)]);
+        fact2.setText(funFacts[random.nextInt(len)]);
+        fact3.setText(funFacts[random.nextInt(len)]);
     }
 }
